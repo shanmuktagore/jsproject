@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .details{
+        border:double;
+        padding-left:100px;
+        margin-top:50px;
+     }
+     .button{
+        margin-bottom:20px;
+        transition-duration: 0.4s;
+     }
+     .button:hover {
+  background-color: #04AA6D; /* Green */
+  color: white;
+}
+    </style>
+</head>
+<body>
+    <div class="alert" style="display:none;" id="popup">
+        <button class="btn btn-warning" onclick="deb()">Debit</button>
+        <button class="btn btn-warning" onclick="cre()">Credit</button>
+    </div>
+    <div class="container mt-5 p-5">
+ <div class="details">
+       <h1>ACCOUNT DETAILS</h1>
+       <h4>NAME=USER</br></br>
+           ACCOUNT NUMBER=SBNIO3333</br></br>
+           AVAILABLE BAL=30000</br></br>
+           ADDRESS=ZENTURN</br></br>
+           PHONE NUMBER=34526789</br></br>
+           E-MAIL=USER@GMAIL.COM</br></br>
+       </h4>
+       <button class="button"><a href="acoount.html">BACK TO HOME</a></button>
+       <button class="btn btn-info" onclick="trans()">Transaction</button>
+       </div>
+      </div>
+      <script>
+        function trans(){
+            document.getElementById("popup").style.display="block";
+        }
+        function deb(){
+            let pin=+prompt("enter yuor pin");
+            if(pin===9182){
+                location.href="debit amount.html"
+            }
+            else{
+                alert("entervalidpassword")
+            }
+        }
+      </script>
+</body>
+
+</html>

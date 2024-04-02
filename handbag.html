@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css" integrity="sha512-i1b/nzkVo97VN5WbEtaPebBG8REvjWeqNclJ6AItj7msdVcaveKrlIIByDpvjk5nwHjXkIqGZscVxOrTb9tsMA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.rtl.min.css" integrity="sha512-V7mESobi1wvYdh9ghD/BDbehOyEDUwB4c4IVp97uL0QSka0OXjBrFrQVAHii6PNt/Zc1LwX6ISWhgw1jbxQqGg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+             .div{
+                padding-left:150px;
+            }
+            .parant{
+                display: flex;
+                flex-wrap: wrap;
+                /* justify-content:space-around;
+                align-items:center; */
+                padding-left:150px;
+            }
+            .card{
+                height: 340px;
+                width: 310px;
+                padding: 1%;
+                margin: 1%;
+            }
+            .card img{
+                height: 270px;
+                width: 280px;
+            }
+        </style>
+    
+    </head>
+    <body>
+        <div class="div">
+    <form>
+        <input type="number" id="min">
+        <input type="number" id="max">
+        <input type="button" class="filter" value="fiter">
+    </form>
+       </div>
+        <div class="row mt-5">
+            <div class="parant">
+                <div class="card child" data-value="100">
+                    <img src="https://m.media-amazon.com/images/I/91ydeiZyycL._AC_UY1000_.jpg">
+                <h2>100rs</h2>
+                </div>
+                <div class="card child" data-value="200">
+                    <img src="https://zouk.co.in/cdn/shop/files/DSC00050copy12.jpg?v=1693897600&width=1024">
+                <h2>200rs</h2>
+                </div>
+                <div class="card child" data-value="300">
+                    <img src="https://maishalifestyle.com/cdn/shop/files/1_b0a5fc80-606a-487a-9dac-e6fe020486ae.jpg?v=1697608324&width=1080">
+                <h2>300rs</h2>
+                </div>
+                <div class="card child" data-value="400">
+                    <img src="https://www.dhresource.com/webp/m/0x0/f2/albu/g13/M00/91/27/rBVak19Df0-AHPxnAAM78MKoo6w660.jpg">
+                <h2>400rs</h2>
+                </div>
+                <div class="card child" data-value="500">
+                    <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/hand-messenger-bag/w/p/8/hanpurse03-10-hand-bag-handbag-purse-home-36-original-imaghx9a4r4fvwst.jpeg?q=20&crop=false">
+                <h2>500rs</h2>
+                </div>
+                <div class="card child" data-value="600 ">
+                    <img src="https://sc01.alicdn.com/kf/H5d268a10656e43ddb80c0352db245533r/China-factory-direct-sales-new-design-Korean.jpg">
+                <h2>600rs</h2>
+                </div>
+                <div class="card child" data-value="700 ">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2022/6/IE/GM/IU/149983752/women-s-girls-latest-handbags.jpeg">
+                <h2>700rs</h2>
+                </div>
+                <div class="card child" data-value="800 ">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20231030/rKBg/653f84c6ddf77915196268b3/-473Wx593H-466758668-green-MODEL.jpg">
+                <h2>800rs</h2>
+                </div>
+                <div class="card child" data-value="900 ">
+                    <img src="https://dillibazar.co.in/wp-content/uploads/Louis-Vuitton-Monogram-Pallas-Safran-Womens-Handbags.jpg">
+                <h2>900rs</h2>
+                </div>
+                <div class="card child" data-value="1000 ">
+                    <img src="https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2022-10/Lifestyle-Elle%20handbags%202.jpg">
+                <h2>1000rs</h2>
+                </div>
+                <div class="card child" data-value="1200 ">
+                    <img src="https://images.meesho.com/images/products/228679056/ikqec_512.webp">
+                <h2>1200rs</h2>
+                </div>
+                <div class="card child" data-value="1300">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20231130/bhyA/6567b9e0ddf7791519a62523/-473Wx593H-466835757-tan-MODEL.jpg">
+                <h2>1300rs</h2>
+                </div>
+            </div>
+        </div>
+        <script>
+             subMit=document.querySelector('.filter');
+    
+             let dataValue=document.querySelectorAll('.child');
+             dataValue.forEach(function(item){
+                 subMit.addEventListener('click', function(){
+                     let m=document.getElementById("min").value;
+                    let n=document.getElementById("max").value;
+                     let mValue=parseInt(m);
+                     let nValue=parseInt(n);
+                     // alert(mValue);
+                    
+                     let dataItem=item.getAttribute("data-value");
+                     if(dataItem >=mValue && dataItem <=nValue){
+                         item.style.display="block";
+                     }
+                     else{
+                         item.style.display="none";
+                     }
+                 })
+             })
+    
+                async function sum(){
+                    let store
+                }
+    
+        </script>
+    </body>
+    </html>

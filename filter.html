@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="number" id="minValue"/>
+        <input type="number" id="maxValue"/>
+        <input type="button" class="submit" value="filter"/>
+    </form>
+ <div>
+    <p class="num" data-value="100">100</p>
+    <p class="num" data-value="200">200</p>
+    <p class="num" data-value="300">300</p>
+    <p class="num" data-value="400">400</p>
+    <p class="num" data-value="500">500</p>
+    <p class="num" data-value="600">600</p>
+    <p class="num" data-value="700">700</p>
+ </div>
+    <script>
+        subBtn = document.querySelector('.submit');
+
+        let dataValue = document.querySelectorAll('.num');
+        dataValue.forEach(function(Items){
+
+        subBtn.addEventListener('click',function(){
+
+           let min = document.getElementById('minValue').value;
+           let max = document.getElementById('maxValue').value;
+
+           minPI = parseInt(min);
+           maxPI = parseInt(max);
+
+           //alert(min);
+           //alert(max);    
+
+           let dataItems = Items.getAttribute('data-value');
+           //alert(dataItems);
+
+           if(dataItems>= minPI && dataItems<=maxPI){
+            Items.style.display="block";
+           }
+           else{
+            Items.style.display="none";
+           }
+
+        })
+    })
+    </script>
+</body>
+</html>

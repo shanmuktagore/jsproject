@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css" integrity="sha512-i1b/nzkVo97VN5WbEtaPebBG8REvjWeqNclJ6AItj7msdVcaveKrlIIByDpvjk5nwHjXkIqGZscVxOrTb9tsMA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.rtl.min.css" integrity="sha512-V7mESobi1wvYdh9ghD/BDbehOyEDUwB4c4IVp97uL0QSka0OXjBrFrQVAHii6PNt/Zc1LwX6ISWhgw1jbxQqGg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            .div{
+                padding-left:150px;
+            }
+            .parant{
+                display: flex;
+                flex-wrap: wrap;
+                /* justify-content:space-around;
+                align-items:center; */
+                padding-left:150px;
+            }
+            .card{
+                height: 340px;
+                width: 310px;
+                padding: 1%;
+                margin: 1%;
+            }
+            .card img{
+                height: 270px;
+                width: 280px;
+            }
+        </style>
+    
+    </head>
+    <body>
+        <div class="div">
+    <form>
+        <input type="number" id="min">
+        <input type="number" id="max">
+        <input type="button" class="filter" value="fiter">
+    </form>
+       </div>
+        <div class="row mt-5">
+            <div class="parant">
+                <div class="card child" data-value="1000">
+                    <img src="https://digitalmarketingdeal.com/blog/wp-content/uploads/2024/01/Top-10-Famous-Jewellers-in-India.jpg">
+                <h2>1000rs</h2>
+                </div>
+                <div class="card child" data-value="2000">
+                    <img src="https://i.pinimg.com/originals/b4/6b/ec/b46bec0ce1909411efa0835b18b6f0b8.jpg">
+                <h2>2000rs</h2>
+                </div>
+                <div class="card child" data-value="3000">
+                    <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/24784370/2023/9/22/c0482a10-f28c-473c-9512-4c6dfaf4d8c31695379189644-KARATCART-Gold-Plated-Pearl-Beaded-Choker-Necklace--Earrings-1.jpg">
+                <h2>3000rs</h2>
+                </div>
+                <div class="card child" data-value="4000">
+                    <img src="https://www.tarinika.in/cdn/shop/files/cf4bd141-b0ba-4a9a-a1b9-88ecf597359e_1200x.jpg?v=1695913487">
+                <h2>4000rs</h2>
+                </div>
+                <div class="card child" data-value="5000">
+                    <img src="https://heritagejewels.com.pk/cdn/shop/files/DSC03369a.jpg?v=1698933324&width=600">
+                <h2>5000rs</h2>
+                </div>
+                <div class="card child" data-value="6000">
+                    <img src="https://assets.vogue.in/photos/5e85c219bc37e00008216f9e/2:3/w_2560%2Cc_limit/Preserving-wedding-jewellery.jpg">
+                <h2>6000rs</h2>
+                </div>
+                <div class="card child" data-value="7000">
+                    <img src="https://goldzouq.in/wp-content/uploads/2023/03/Temple-Jewellery-Necklace.webp">
+                <h2>7000rs</h2>
+                </div>
+                <div class="card child" data-value="8000">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2023/1/KM/RI/MJ/151967558/temple-necklace-jewellery.jpeg">
+                <h2>8000rs</h2>
+                </div>
+                <div class="card child" data-value="9000">
+                    <img src="https://www.orra.co.in/media/catalog/product/cache/f863675abff2fd3fa792fa24743dba0a/o/s/osn23036_1_3mkgpryipkjyysh4.jpg">
+                <h2>9000rs</h2>
+                </div>
+                <div class="card child" data-value="10000">
+                    <img src="https://m.media-amazon.com/images/I/811GGxhSZbL.jpg">
+                <h2>10000rs</h2>
+                </div>
+                <div class="card child" data-value="12000">
+                    <img src="https://sukkhi.com/cdn/shop/products/N73718_MIXBG1_400x.jpg?v=1551866942">
+                <h2>12000rs</h2>
+                </div>
+                <div class="card child" data-value="13000">
+                    <img src="https://image.wedmegood.com/resized/450X/uploads/project/71922/1577715975_SwinAndSwe_wedding_preview__230.jpg">
+                <h2>13000rs</h2>
+                </div>
+            </div>
+        </div>
+        <script>
+             subMit=document.querySelector('.filter');
+    
+             let dataValue=document.querySelectorAll('.child');
+             dataValue.forEach(function(item){
+                 subMit.addEventListener('click', function(){
+                     let m=document.getElementById("min").value;
+                    let n=document.getElementById("max").value;
+                     let mValue=parseInt(m);
+                     let nValue=parseInt(n);
+                     // alert(mValue);
+                    
+                     let dataItem=item.getAttribute("data-value");
+                     if(dataItem >=mValue && dataItem <=nValue){
+                         item.style.display="block";
+                     }
+                     else{
+                         item.style.display="none";
+                     }
+                 })
+             })
+    
+                async function sum(){
+                    let store
+                }
+    
+        </script>
+    </body>
+    </html>

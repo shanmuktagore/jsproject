@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<title>DEBIT</title>
+<style>
+    .sub{
+        margin-top:200px;
+    }
+</style>
+</head>
+<body>
+    <div class="sub">
+  <center><h1>ENTER YOUR DEBIT DETAILS</h1></center>
+  <div class="container  p-5" style="border:solid">
+  <h4>USER NAME:TITLE</h4><br/>
+   <h4>ACCOUNT NUMBER:SBNIO3333</h4><br/>
+
+    <form>
+        <input type="text" placeholder="enter the amount" id="demo"/><br/><br/>
+		</form>
+        <button class="btn btn-info" onclick="sub()">submit</button><br/><br/>
+        <button class="btn btn-info" onclick="bal()">check balance</button>
+        <button class="btn btn-info"><a href="acoount.html">BACK TO HOME</button></a><br/>
+  </div>
+  </div>
+  <script>
+
+  function sub(){
+    const amount=20000;
+    let x=document.getElementById("demo").value;
+    let xvalue=parseInt(x);
+    if(xvalue<=amount){
+    const Res=(amount-xvalue);
+    alert(Res);
+}
+else if("  "){
+  alert("enter your debit amount");
+}
+else{
+alert("insufficient amount");
+}
+}
+function bal(){
+    const amount=20000;
+    let x=document.getElementById("demo").value;
+    let xvalue=parseInt(x);
+    if(xvalue<=amount){
+    const Res=(amount-xvalue);
+    alert(Res);
+}
+else{
+alert("insufficient amount");
+}
+}
+  </script>
+</body>
+</html>

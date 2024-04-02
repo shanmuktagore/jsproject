@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css" integrity="sha512-i1b/nzkVo97VN5WbEtaPebBG8REvjWeqNclJ6AItj7msdVcaveKrlIIByDpvjk5nwHjXkIqGZscVxOrTb9tsMA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<title>CREDIT</title>
+<style>
+    .sub{
+        margin-top:200px;
+    }
+</style>
+</head>
+<body>
+    <div class="sub">
+ <h1><center>ENTER YOUR CREDIT DETAILS</center></h1>
+  <div class="container  p-5" style="border:solid">
+  <h4>USER NAME:TITLE</h4><br/>
+   <h4>   ACCOUNT NUMBER:SBNIO3333</h4><br/>
+    <form>
+        <input type="number" placeholder="enter the amount" id="demo"/><br/><br/>
+		</form>
+        <button class="btn btn-info" onclick="sub()">submit</button><br/><br/>
+        <button class="btn btn-info" onclick="bal()">check balance</button>
+         <button class="btn btn-info"> <a href="acoount.html">BACK TO HOME</a></button><br/>
+    </div>
+    </div>
+  <script>
+ function sub(){
+    const amount=20000;
+    let x=document.getElementById("demo").value;
+    let xvalue=parseInt(x);
+    if(xvalue<=amount){
+const Res=(amount+xvalue);
+    alert(Res);
+}
+else if("  "){
+  alert("enter your credit amount");
+}
+else{
+alert("insufficient amount");
+}
+}
+function bal(){
+    const amount=20000;
+    let x=document.getElementById("demo").value;
+    let xvalue=parseInt(x);
+    if(xvalue<=amount){
+    const Res=(amount+xvalue);
+    alert(Res);
+}
+else{
+alert("insufficient amount");
+}
+}
+  </script>
+</body>
+</html>
